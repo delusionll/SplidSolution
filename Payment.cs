@@ -10,6 +10,7 @@
             Amount = amount;
             FromUser = from;
             ToUser = to;
+            UserPayment(amount, from, to);
         }
 
         public void UserPayment(double amount, User fromID, User toID)
