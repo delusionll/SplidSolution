@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SplidSolution", "SplidSolution.csproj", "{9E28BF46-5297-4308-BB87-DC2FA6AFAFAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E07E0F9E-10F8-4AD3-91EC-FED584B8B51E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BDF8E27F-12C5-44F9-AACF-EC9D26291D2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplidWPF", "SplidWPF\SplidWPF.csproj", "{E3CD8D76-C71E-42B8-946E-DB18BDF27756}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E28BF46-5297-4308-BB87-DC2FA6AFAFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E28BF46-5297-4308-BB87-DC2FA6AFAFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E28BF46-5297-4308-BB87-DC2FA6AFAFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E28BF46-5297-4308-BB87-DC2FA6AFAFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3CD8D76-C71E-42B8-946E-DB18BDF27756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3CD8D76-C71E-42B8-946E-DB18BDF27756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3CD8D76-C71E-42B8-946E-DB18BDF27756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3CD8D76-C71E-42B8-946E-DB18BDF27756}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E28BF46-5297-4308-BB87-DC2FA6AFAFAC} = {E07E0F9E-10F8-4AD3-91EC-FED584B8B51E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {768CA7B0-26A1-4603-AF37-72E7F4E6B835}
+	EndGlobalSection
+EndGlobal
