@@ -15,8 +15,8 @@
 
         public void UserPayment(double amount, User fromID, User toID)
         {
-            fromID.Balance = --amount;
-            toID.Balance = ++amount;
+            fromID.Balance -= amount;
+            toID.Balance += amount;
 
         }
     }
