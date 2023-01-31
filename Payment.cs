@@ -2,18 +2,21 @@
 {
     public class Payment : AbstractExpense
     {
-        public int ToID { get; }
+        public User ToUser { get; }
 
-        public Payment(string title, double amount, int from, int to)
+        public Payment(string title, double amount, User from, User to)
         {
             Title = title;
             Amount = amount;
-            FromId = from;
-            ToID = to;
+            FromUser = from;
+            ToUser = to;
         }
 
-        public void UserBalanceChange(double fromBalance, double toBalance)
+        public void UserPayment(double amount, User fromID, User toID)
         {
+            fromID.Balance = --amount;
+            toID.Balance = ++amount;
+
         }
     }
 }
