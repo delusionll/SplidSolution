@@ -14,6 +14,6 @@ namespace SplidSolution
             Name = name;
             Balance = 0;
         }
-        public User() { }
+        public User() { } //Конструктор без параметров для БД EF
     }
 }

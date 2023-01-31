@@ -19,5 +19,6 @@
             toID.Balance += amount;
 
         }
+        public Payment() { } //Конструктор без параметров для БД EF
     }
 }
