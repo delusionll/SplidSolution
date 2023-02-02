@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Data.Entity;
 using System.Linq;
+using System.Data.Entity.Migrations;
 
 namespace SplidSolution
 {
@@ -12,15 +13,17 @@ namespace SplidSolution
             using (var db = new DB())
             {
                 User l = new User("Lexa");
-                db.Users.Add(l);
+                db.Users.AddOrUpdate(l);
                 User v = new User("Vlad");
-                db.Users.Add(v);
+                db.Users.AddOrUpdate(v);
                 User p = new User("Polina");
-                db.Users.Add(p);
-                db.SaveChanges();
+                db.Users.AddOrUpdate(p);
                 Console.Write("Hello");
 
                 Payment pay1 = new Payment("TestPayment", 100, l, p);
+                db.Payments.AddOrUpdate(pay1);
+                db.SaveChanges();
+
 
                 var query = from x in db.Users
                             orderby x.Name
