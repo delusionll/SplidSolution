@@ -6,7 +6,8 @@ namespace SplidSolution
     {
         [Key]
         public int UserID { get; set; } // ID Юзера
-        public string Name { get; set; } //Свойство класса Имя пользователя
+
+        public string? Name { get; set; } //Свойство класса Имя пользователя
         public double Balance { get; set; } //Свойство класса баланс пользователя
 
         public User(string name) //Конструктор объекта Юзер
@@ -14,6 +15,8 @@ namespace SplidSolution
             Name = name;
             Balance = 0;
         }
-        public User() { } //Конструктор без параметров для БД EF
+
+        public User()
+        { } //Конструктор без параметров для БД EF
     }
 }
