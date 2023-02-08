@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Security.RightsManagement;
 
 namespace SplidSolution
 {
     public class SimplePayment
     {
         [Key]
-        public int PaymentId { get; set; }
+        public  int PaymentId { get; set; }
         public User? ToUser { get; }
-        public string? Title { get; }
+        public string Title { get; }
         public double Amount { get; }
         public User? FromUser { get; }
 
@@ -26,7 +27,6 @@ namespace SplidSolution
             toID.Balance += amount;
         }
 
-        public SimplePayment()
-        { } //Конструктор без параметров для БД EF
+        public SimplePayment() { } //Конструктор без параметров для БД EF
     }
 }

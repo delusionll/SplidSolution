@@ -1,4 +1,6 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace SplidSolution
 {
@@ -6,7 +8,6 @@ namespace SplidSolution
     {
         [Key]
         public int UserID { get; set; } // ID Юзера
-
         public string? Name { get; set; } //Свойство класса Имя пользователя
         public double Balance { get; set; } //Свойство класса баланс пользователя
 
@@ -18,5 +19,18 @@ namespace SplidSolution
 
         public User()
         { } //Конструктор без параметров для БД EF
+
+        public static User CreateUser(string newUserName)
+        {
+            User user = new User(newUserName);
+
+            using (var _db = new SplidContext())
+            {
+                _db.Users.Add(user);
+                _db.SaveChanges();
+            }
+            return user;
+
+        }
     }
 }

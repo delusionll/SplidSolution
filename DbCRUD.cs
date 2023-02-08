@@ -7,32 +7,20 @@ namespace SplidSolution
 {
     public class DbCRUD
     {
-        private readonly DB _db;
-        public DbCRUD(DB db)
+        private readonly SplidContext _db;
+        public DbCRUD(SplidContext db)
         {
             _db = db;
         }
 
         public static ICollection<User> GetAllUsers()
         {
-            using (var _db = new DB())
+            using (var _db = new SplidContext())
             {
                 return _db.Users
                 .AsNoTracking().ToList();
             }
         }
 
-        public static void CreateUser(User newUser)
-        {
-            using (var _db = new DB())
-            {
-                if(DbCRUD.GetAllUsers().Contains(newUser)) { Console.WriteLine("User is already exist"); }
-                else
-                {
-                _db.Users.Add(newUser);
-                _db.SaveChanges();
-                }
-            }
-        }
     }
 }
