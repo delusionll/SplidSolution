@@ -13,6 +13,15 @@ namespace SplidSolution
             _db = db;
         }
 
+        public static User GetUserById(int id)
+        {
+            using (var _db = new SplidContext())
+            {
+                var user = _db.Users.FirstOrDefault<User>(x => x.UserID == id);
+                return user;
+            }
+        }
+
         public static ICollection<User> GetAllUsers()
         {
             using (var _db = new SplidContext())
